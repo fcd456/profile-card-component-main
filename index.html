@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Kumbh+Sans">
+    <title>Frontend Mentor | Profile card component</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden;
+            font-family: kumbh Sans, sans-serif;
+        }
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+        .container{
+            height: 100vh;
+            width: 100%;
+            background-color: hsl(185, 75%, 39%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .card{
+            width: 300px;
+            background-color: white;
+            border-radius: 10px;
+            z-index: 2;
+        }
+        .card-top{
+            background-image: url("images/bg-pattern-card.svg");
+            width: 100%;
+            height: 100px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+        .card-img{
+            position: relative;
+            top: -50px;
+            left: 100px;
+            width: 105px;
+            height: 105px;
+            background-color: white;
+            display: flex;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+        }
+        .img-profile{
+            max-width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+        .card-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .row{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card-bottom{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .bottom-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .font{
+            font-size: 18px;
+            color: hsl(229, 23%, 23%);
+            margin: 0;
+            font-weight: 700;
+        }
+        p{
+            font-size: 15px;
+            color: hsl(0, 0%, 59%);
+            font-weight: 400;
+        }
+        .abs{
+            position: absolute;
+            max-width: 100%;
+            height: auto;
+            z-index: 1;
+        }
+        .top{
+            transform: rotate(30deg);
+            top: -600px;
+            left: -250px;
+        }
+        .bot{
+            bottom: -650px;
+            right: -250px;
+        }
+        hr{
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+        @media only screen and (width: 375px) {
+            .top {
+                transform: rotate(30deg);
+                top: -200px;
+                left: -83px;
+            }
+
+            .bot {
+                bottom: -216.667px;
+                right: -83px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <img class="abs top" src="images/bg-pattern-top.svg">
+    <div class="card">
+        <div class="card-top">
+        </div>
+        <div class="card-img">
+            <img class="img-profile" src="images/image-victor.jpg">
+        </div>
+        <div class="card-text">
+            <div class="row">
+                <h3 class="font">Victor Crest &nbsp;</h3>
+                <p class="font" style="font-weight: 400">26</p>
+            </div>
+            <p>London</p>
+        </div>
+        <hr>
+        <div class="card-bottom">
+            <div class="bottom-text">
+                <h3 class="font">80K</h3>
+                <p>Followers</p>
+            </div>
+            <div class="bottom-text">
+                <h3 class="font">803K</h3>
+                <p>Likes</p>
+            </div>
+            <div class="bottom-text">
+                <h3 class="font">1.4K</h3>
+                <p>Photos</p>
+            </div>
+        </div>
+    </div>
+    <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Omar Elsafti</a>.
+    </div>
+    <img class="abs bot" src="images/bg-pattern-bottom.svg">
+</div>
+</body>
+</html>
